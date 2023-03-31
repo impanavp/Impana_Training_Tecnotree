@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Date</title>
+  </head>
+  <body>
+    <h1>Current Day and Time</h1>
+    <script>
+        // create a new Date object
+        const now = new Date();
+
+        // get the day of the week as a string
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const dayOfWeek = daysOfWeek[now.getDay()];
+
+        // get the current hour, minute, and second
+        let hour = now.getHours();
+        const minute = now.getMinutes();
+        const second = now.getSeconds();
+
+        // convert to 12-hour time and determine AM/PM
+        let ampm = "AM";
+        if (hour > 12) {
+            hour -= 12;
+            ampm = "PM";
+        }
+
+        // construct the time string
+        const timeString = `${hour} : ${minute} : ${second} ${ampm}`;
+
+        // construct the output string
+        const outputString = `Today is : ${dayOfWeek}. Current time is : ${timeString}`;
+
+        // display the output
+        alert(outputString);
+
+    </script>
+  </body>
+</html>

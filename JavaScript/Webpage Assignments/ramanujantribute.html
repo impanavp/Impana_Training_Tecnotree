@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tribute to Srinivasa Ramanujan</title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .tribute-section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        blockquote {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #ddd;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+	<header>
+		<h1>Tribute to Srinivasa Ramanujan</h1>
+	</header>
+
+	<main>
+		<section class="tribute-section">
+			<h2>About Srinivasa Ramanujan</h2>
+			<img src="C:\Users\prasaim\OneDrive - Tecnotree\Desktop\HTML\Ramanujan.jpg" alt="Srinivasa Ramanujan">
+			<p>Srinivasa Ramanujan was a brilliant Indian mathematician who made significant contributions to number theory, infinite series, and continued fractions. Born in 1887 in Erode, Tamil Nadu, India, Ramanujan had a passion for mathematics from a young age and independently discovered many mathematical results.</p>
+			<p>Despite facing numerous obstacles, including poverty and lack of formal education, Ramanujan continued to pursue his mathematical research and eventually gained recognition from prominent mathematicians in India and England. In 1913, he was awarded a scholarship to study at the University of Cambridge in England, where he collaborated with British mathematician G. H. Hardy and produced many groundbreaking mathematical results.</p>
+			<p>Tragically, Ramanujan's life was cut short when he died of illness at the young age of 32. Nevertheless, his legacy lives on, and his contributions to mathematics continue to inspire and fascinate mathematicians and enthusiasts around the world.</p>
+		</section>
+
+		<section class="tribute-section">
+			<h2>Some of Ramanujan's Famous Contributions</h2>
+			<ul>
+				<li>The Hardy-Ramanujan number, a taxicab number that can be expressed as the sum of two cubes in two different ways</li>
+				<li>The Ramanujan prime, a prime number that appears in Ramanujan's congruences and other mathematical functions</li>
+				<li>The Ramanujan theta function, a complex-valued function that is closely related to modular forms</li>
+			</ul>
+		</section>
+
+		<section class="tribute-section">
+			<h2>Quotes from Srinivasa Ramanujan</h2>
+			<blockquote>"An equation means nothing to me unless it expresses a thought of God."</blockquote>
+			<blockquote>"I have discovered a truly marvelous proof of this, which this margin is too narrow to contain."</blockquote>
+			<blockquote>"Theorems and formulae would be mere barren sub- stances without the ideas which fill them or the purposes which guide them."</blockquote>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Tribute to Srinivasa Ramanujan</p>
+	</footer>
+
+	<script>
+        // Scroll to top button functionality
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+
+        scrollToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+        });
+
+        // Navigation menu functionality
+        const navMenuButton = document.getElementById("nav-menu-button");
+        const navMenu = document.getElementById("nav-menu");
+
+        navMenuButton.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        });
+
+        // Modal image functionality
+        const modal = document.getElementById("modal");
+        const modalImage = document.getElementById("modal-image");
+        const modalCaption = document.getElementById("modal-caption");
+        const images = document.querySelectorAll(".gallery img");
+
+        images.forEach((image) => {
+        image.addEventListener("click", () => {
+            modal.classList.add("active");
+            modalImage.src = image.src;
+            modalCaption.textContent = image.alt;
+        });
+        });
+
+        modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.classList.remove("active");
+        }
+        });
+
+    </script>
+</body>
+</html>

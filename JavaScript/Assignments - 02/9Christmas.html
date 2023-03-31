@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chritmas</title>
+</head>
+<body>
+    <h2>Next Chritmas</h2>
+    <script>
+       var today = new Date();
+
+        var targetDate = new Date(today.getFullYear(), 11, 25);
+
+        if (targetDate < today) {
+            targetDate.setFullYear(targetDate.getFullYear() + 1);
+        }
+
+
+        var daysLeft = Math.floor((targetDate - today) / (1000 * 60 * 60 * 24));
+
+
+        console.log("There are " + daysLeft + " days left until Christmas!");
+
+    </script>
+</body>
+</html>

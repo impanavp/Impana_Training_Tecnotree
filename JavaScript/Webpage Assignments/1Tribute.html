@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tribute Page</title>
+	<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        header {
+            background-color: #eee;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .tribute-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #eee;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+<body>
+	<header>
+		<h1>Tribute Page to </h1>
+	</header>
+
+	<main>
+		<section class="tribute-section">
+			<h2>John Smith</h2>
+			<img src="https://via.placeholder.com/150" alt="John Smith">
+			<p>John Smith was a beloved husband, father, and grandfather who lived a long and fulfilling life. He was born in 1925 in New York City and grew up during the Great Depression. Despite the challenges he faced, John always had a positive outlook on life and never lost his sense of humor.</p>
+			<p>After serving in World War II, John worked as a teacher for many years, inspiring countless students to pursue their dreams and make a difference in the world. He was known for his kindness, his patience, and his unwavering dedication to his students.</p>
+			<p>John passed away in 2018 at the age of 93. He will be deeply missed by his family, his friends, and all those whose lives he touched.</p>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Tribute Page</p>
+	</footer>
+
+    <script>
+        // Add an event listener to the image element to make it fade out when clicked
+        const image = document.querySelector('img');
+        image.addEventListener('click', function() {
+        image.style.opacity = '0.5';
+        });
+
+        // Add a function to display a popup message when the user clicks a button
+        function displayMessage() {
+        alert('Thank you for visiting this tribute page!');
+        }
+
+        // Add an event listener to the button element to call the displayMessage function when clicked
+        const button = document.querySelector('button');
+        button.addEventListener('click', displayMessage);
+
+    </script>
+</body>
+</html>

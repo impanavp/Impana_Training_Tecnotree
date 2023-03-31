@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day</title>
+</head>
+<body>
+    <h2>Current Day and Time</h2>
+    <script>
+        const today = new Date();
+        const day = today.toLocaleDateString('en-US', { weekday: 'long' });
+        const hour = today.getHours();
+        const minute = today.getMinutes();
+        const second = today.getSeconds();
+        const ampm = hour >= 12 ? 'PM' : 'AM';
+        const formattedHour = hour % 12 || 12;
+
+        const currentTime = formattedHour  + ' : ' + minute + ' : ' + second  + ' '+ampm;
+
+        console.log('Today is: ' + day);
+        console.log('Current time is: ' + currentTime);
+
+    </script>
+</body>
+</html>

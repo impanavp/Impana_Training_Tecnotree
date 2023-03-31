@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Datet</title>
+</head>
+<body>
+    <h2>Current Date</h2>
+    <script>
+        const today = new Date();
+
+        const dd = String(today.getDate()).padStart(2, '0');
+        const mm = String(today.getMonth() + 1).padStart(2, '0'); 
+        const yyyy = today.getFullYear();
+
+        const dateFormat1 = mm + '-' + dd + '-' + yyyy;
+        const dateFormat2 = mm + '/' + dd + '/' + yyyy;
+        const dateFormat3 = dd + '-' + mm + '-' + yyyy;
+        const dateFormat4 = dd + '/' + mm + '/' + yyyy;
+
+        console.log(dateFormat1);
+        console.log(dateFormat2);
+        console.log(dateFormat3);
+        console.log(dateFormat4);
+
+    </script>
+</body>
+</html>

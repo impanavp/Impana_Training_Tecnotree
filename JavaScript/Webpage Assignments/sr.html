@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Srinivasa Ramanujan - Tribute Page</title>
+	<style>
+		body {
+			background-color: #F7F7F7;
+			font-family: Arial, sans-serif;
+			color: #333;
+		}
+		.container {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 50px 20px;
+			text-align: center;
+		}
+		h1 {
+			font-size: 48px;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		.quote {
+			font-style: italic;
+			margin-top: 40px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Srinivasa Ramanujan</h1>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Srinivasa_Ramanujan.jpg/330px-Srinivasa_Ramanujan.jpg" alt="Srinivasa Ramanujan">
+		<p><strong>Srinivasa Ramanujan</strong> (22 December 1887 – 26 April 1920) was an Indian mathematician who made significant contributions to the field, particularly in the areas of number theory, mathematical analysis, and continued fractions.</p>
+		<p>Despite having no formal training in mathematics, Ramanujan developed his own mathematical research in isolation. He made remarkable discoveries, including the Ramanujan–Petersson conjecture, and independently discovered the Hardy–Ramanujan–Littlewood circle method, which he used to derive an approximate formula for the number of prime numbers up to a given limit.</p>
+		<p>Unfortunately, Ramanujan's health was poor throughout his life, and he died at the young age of 32. His legacy lives on, however, as his work continues to inspire mathematicians around the world.</p>
+		<p class="quote">"An equation for me has no meaning, unless it represents a thought of God." - Srinivasa Ramanujan</p>
+	</div>
+	<script>
+		// Add an event listener to the quote element to change its color on mouseover
+		const quote = document.querySelector('.quote');
+		quote.addEventListener('mouseover', () => {
+			quote.style.color = 'green';
+		});
+		quote.addEventListener('mouseout', () => {
+			quote.style.color = 'black';
+		});
+	</script>
+</body>
+</html>
