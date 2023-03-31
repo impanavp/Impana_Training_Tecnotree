@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sum of Array Example</title>
+  </head>
+  <body>
+    <h1>Sum of Array Example</h1>
+    <p>The sum of the array is <span id="sum"></span></p>
+
+    <script>
+      const numbers = [1, 2, 3, 4, 5];
+      const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+      const sumElement = document.getElementById("sum");
+      sumElement.textContent = sum;
+    </script>
+  </body>
+</html>
