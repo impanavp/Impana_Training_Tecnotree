@@ -1,0 +1,31 @@
+<!--Use CSS to style the "selected" class with a background color of yellow.-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List Example</title>
+    <style>
+      .selected {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Cat</li>
+      <li>Dog</li>
+      <li>Rabbit</li>
+    </ul>
+
+    <script>
+      var listItems = document.querySelectorAll('li');
+      for (var i = 0; i < listItems.length; i++) {
+        listItems[i].addEventListener('click', function() {
+          for (var j = 0; j < listItems.length; j++) {
+            listItems[j].classList.remove('selected');
+          }
+          this.classList.add('selected');
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!--When an item in the list is clicked, add the "selected" class to the clicked item and 
+  remove the "selected" class from all other items in the list.-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List Example</title>
+  </head>
+  <body>
+    <ul>
+      <li>Whatsapp</li>
+      <li>Instagram</li>
+      <li>Facebook</li>
+    </ul>
+
+    <script>
+      var listItems = document.querySelectorAll('li');
+      for (var i = 0; i < listItems.length; i++) {
+        listItems[i].addEventListener('click', function() {
+          for (var j = 0; j < listItems.length; j++) {
+            if (listItems[j] !== this) {
+              listItems[j].classList.remove('selected');
+            }
+          }
+          this.classList.add('selected');
+          alert("Selected")
+        });
+      }
+    </script>
+  </body>
+</html>

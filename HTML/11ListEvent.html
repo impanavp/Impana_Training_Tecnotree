@@ -1,0 +1,22 @@
+<!--Use JavaScript to add an event listener to the list.-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List Example</title>
+  </head>
+  <body>
+    <ul id="myList">
+      <li>Red</li>
+      <li>Blue</li>
+      <li>Pink</li>
+    </ul>
+
+    <script>
+      var list = document.getElementById('myList');
+      list.addEventListener('click', function(event) {
+        var item = event.target;
+        alert('You clicked on : '+ item.textContent);
+      });
+    </script>
+  </body>
+</html>

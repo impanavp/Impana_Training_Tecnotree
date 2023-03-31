@@ -1,0 +1,28 @@
+<!--When the form is submitted, prevent the default form submission behavior and display an alert with the values of the name and email input fields.-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Example</title>
+  </head>
+  <body>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <script>
+      var form = document.querySelector('form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        alert('Name : '+ name + "\n" +'Email : ' + email);
+      });
+    </script>
+  </body>
+</html>

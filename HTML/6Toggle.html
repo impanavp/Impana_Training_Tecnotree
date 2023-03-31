@@ -1,0 +1,22 @@
+<!--When the new button is clicked, toggle the background color of the body between white and light gray.-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Example</title>
+  </head>
+  <body>
+    <button id="my-button">Toggle background color</button>
+
+    <script>
+        var Button = document.getElementById("my-button");
+        Button.onclick = function() {
+        var body = document.getElementsByTagName("body")[0];
+        if (body.style.backgroundColor === "white") {
+          body.style.backgroundColor = "lightgray";
+        } else {
+          body.style.backgroundColor = "white";
+        }
+      }
+    </script>
+  </body>
+</html>

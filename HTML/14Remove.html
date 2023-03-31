@@ -1,0 +1,41 @@
+<!--Add a button to the HTML page that, when clicked, removes the "selected" class 
+  from all items in the list.-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List Example</title>
+    <style>
+      .selected {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Impana</li>
+      <li>Nisha</li>
+      <li>Poorvika</li>
+    </ul>
+
+    <button id="clear-button">Clear Selection</button>
+
+    <script>
+      var listItems = document.querySelectorAll('li');
+      for (var i = 0; i < listItems.length; i++) {
+        listItems[i].addEventListener('click', function() {
+          for (var j = 0; j < listItems.length; j++) {
+            listItems[j].classList.remove('selected');
+          }
+          this.classList.add('selected');
+        });
+      }
+
+      var clearButton = document.getElementById('clear-button');
+      clearButton.addEventListener('click', function() {
+        for (var i = 0; i < listItems.length; i++) {
+          listItems[i].classList.remove('selected');
+        }
+      });
+    </script>
+  </body>
+</html>

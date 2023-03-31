@@ -1,0 +1,22 @@
+<!--Use JavaScript to add an event listener to the new button.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listener</title>
+</head>
+<body>
+    <button id="myButton">Enter</button>
+    <button id="my-Button">Cancel</button>
+    <script>
+        var button = document.getElementById("myButton");
+        button.addEventListener("click", function() {
+            alert("Done");
+        });
+        var button = document.getElementById("my-Button");
+        button.addEventListener("click", function() {
+            alert("Back");
+        });
+
+    </script>
+</body>
+</html>

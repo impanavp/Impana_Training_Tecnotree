@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button, Form, and List Example</title>
+    <style>
+      .selected {
+        background-color: yellow;
+      }
+      form {
+        text-align: center;
+      }
+      body {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="message">Machine learning is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy.
+      <br>
+      <br>
+      Machine learning is an important component of the growing field of data science. Through the use of statistical methods, algorithms are trained to make classifications or predictions, and to uncover key insights in data mining projects.
+      <br>
+      <br>
+      Machine learning algorithms are typically created using frameworks that accelerate solution development.
+    </p>
+    <button id="btn1">Click me!</button><br><br>
+    <button id="btn2">Toggle background color</button>
+    <br>
+    <br>
+    <form>
+      <label>Name:</label>
+      <input type="text" id="name-input"><br><br>
+      <label>Email:</label>
+      <input type="email" id="email-input"><br><br>
+      <button type="submit">Submit</button>
+    </form>
+    <ul>
+      <li>Red</li>
+      <li>Blue</li>
+      <li>Black</li>
+    </ul>
+    <button id="clear-button">Clear Selection</button>
+
+    <script>
+      var message = document.getElementById('message');
+      var btn1 = document.getElementById('btn1');
+      btn1.addEventListener('click', function() {
+        message.textContent = "The button was clicked!";
+      });
+
+      var btn2 = document.getElementById('btn2');
+      btn2.addEventListener('click', function() {
+        var body = document.querySelector('body');
+        if (body.style.backgroundColor === 'white') {
+          body.style.backgroundColor = 'lightgray';
+        } else {
+          body.style.backgroundColor = 'white';
+        }
+      });
+
+      var form = document.querySelector('form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var name = document.getElementById('name-input').value;
+        var email = document.getElementById('email-input').value;
+        alert("Name: " + name + "\nEmail: " + email);
+      });
+
+      var listItems = document.querySelectorAll('li');
+      for (var i = 0; i < listItems.length; i++) {
+        listItems[i].addEventListener('click', function() {
+          for (var j = 0; j < listItems.length; j++) {
+            listItems[j].classList.remove('selected');
+          }
+          this.classList.add('selected');
+        });
+      }
+
+      var clearButton = document.getElementById('clear-button');
+      clearButton.addEventListener('click', function() {
+        for (var i = 0; i < listItems.length; i++) {
+          listItems[i].classList.remove('selected');
+        }
+      });
+    </script>
+  </body>
+</html>
